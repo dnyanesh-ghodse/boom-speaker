@@ -1,0 +1,54 @@
+.box{
+  width: 200px;
+  height: 200px;
+  background: #999;
+  border-radius: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle{
+  width: 150px;
+  height: 150px;
+  background:url("./speaker.png");
+  background-position: center;
+  border-radius: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.inner{
+  width: 100px;
+  height: 100px;
+  background: #333;
+  border-radius: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* pseudo class and animations */
+
+.box::after{
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .3s;
+}
+
+.box:active::after {
+    transform: scale(1.4);
+    opacity: 0;
+}
